@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker</title>
+</head>
+<body>
+
+    <h2>Healthcare Symptom Checker</h2>
+
+    <textarea id="symptoms" rows="5" cols="40" placeholder="Enter symptoms"></textarea>
+    <br><br>
+
+    <button onclick="checkSymptoms()">Check</button>
+
+    <h3>Result:</h3>
+    <p id="result"></p>
+
+    <script>
+        async function checkSymptoms() {
+            let symptoms = document.getElementById("symptoms").value;
+
+            let response = await fetch("http://127.0.0.1:8000/check", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ symptoms: symptoms })
+            });
+
+            let data = await response.json();
+            document.getElementById("result").innerText = data.result;
+        }
+    </script>
+
+</body>
+</html>
