@@ -48,14 +48,6 @@ uvicorn main:app --reload
 This tool is for educational purposes only and not a substitute for professional medical advice.
 ---
 
-##  How to Run
-
-git clone https://github.com/uhavasantha/symptom-checker.git
-pip install -r requirements.txt
-python app.py
-
----
-
 ##  How It Works
 
 * Takes symptoms as input
@@ -75,7 +67,7 @@ python app.py
 
 ##  Demo
 
-[Watch here](https://drive.google.com/file/d/1QCDxCWXw8XwJxFRwBfb9lhpwn0Z9EMlM/view?usp=drivesdk)
+[Watch here](https://drive.google.com/file/d/1QCDxCWXw8XwJxFRwBfb9lhpwn0Z9EMlM/view?usp=drive_link)
 
 ---
 
